@@ -1,0 +1,100 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Courier New", Courier, monospace;
+  overflow: hidden;
+}
+
+/* Container entry animation */
+@keyframes slideFadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(40px) scale(0.95);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+.container {
+  background: rgba(0, 0, 0, 0.6);
+  padding: 40px 50px;
+  border-radius: 12px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.7);
+  text-align: center;
+  animation: slideFadeIn 1.2s ease-out forwards;
+}
+
+/* Color cycle for text */
+@keyframes colorCycle {
+  0% {
+    color: #444444;
+  }
+
+  /* Dark gray */
+  25% {
+    color: #888888;
+  }
+
+  /* Lighter gray */
+  50% {
+    color: #ffffff;
+  }
+
+  /* White */
+  75% {
+    color: #cccccc;
+  }
+
+  /* Light gray */
+  100% {
+    color: #444444;
+  }
+
+  /* Back to dark gray */
+}
+
+/* Bounce effect for each update */
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.05);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
+.age-display {
+  font-size: 2rem;
+  line-height: 1.9;
+  animation: colorCycle 6s linear infinite;
+}
+
+.age-display span {
+  display: inline-block;
+  animation: pulse 0.3s ease-in-out;
+}
+
+/* Highlight styling */
+.highlight {
+  color: #00ff9d;
+  font-weight: bold;
+  text-shadow: 0 0 6px rgba(0, 255, 157, 0.5);
+}
