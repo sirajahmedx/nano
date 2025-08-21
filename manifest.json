@@ -1,0 +1,10 @@
+{
+  "manifest_version": 3,
+  "name": "Birthday Countdown Grid",
+  "version": "1.0",
+  "description": "New tab page with countdown grid to 18th birthday",
+  "permissions": ["bookmarks", "storage"],
+  "chrome_url_overrides": {
+    "newtab": "index.html"
+  }
+}
